@@ -16,11 +16,13 @@ export default function TableRow({ asset, index }: Props) {
   return (
     <tr className='text-sm border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 items-center'>
       <td className='py-2 px-4'>{index}</td>
-      <td className='py-2 px-4 flex gap-2 items-center'>
-        <img src={asset.logo} alt={asset.name} className='w-5 h-5' />
-        <div className='font-semibold'>
-          {asset.name}
-          <span className='text-xs text-gray-500 pl-2'>{asset.symbol}</span>
+      <td className='py-2 px-4'>
+        <div className='flex gap-2 items-center'>
+          <img src={asset.logo} alt={asset.name} className='w-5 h-5' />
+          <div className='font-semibold'>
+            {asset.name}
+            <span className='text-xs text-gray-500 pl-2'>{asset.symbol}</span>
+          </div>
         </div>
       </td>
 
